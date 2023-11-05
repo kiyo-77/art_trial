@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Habibi:wght@400&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-habibi: Habibi;
+  --font-kodchasan: Kodchasan;
+  --font-bodoni-moda: "Bodoni Moda";
+
+  /* font sizes */
+  --font-size-16xl: 35px;
+  --font-size-36xl: 55px;
+  --font-size-6xl: 25px;
+  --font-size-mini: 15px;
+  --font-size-xl: 20px;
+  --font-size-4xl-5: 23.5px;
+
+  /* Colors */
+  --color-gray: #202217;
+  --color-gray-100: rgba(26, 23, 23, 0.45);
+  --color-white: #fff;
+  --color-linen-100: #e9e9db;
+
+  /* Gaps */
+  --gap-8xs-1: 4.1px;
+
+  /* Paddings */
+  --padding-3xs: 10px;
+
+  /* Border radiuses */
+  --br-7xl: 26px;
+  --br-6xl: 25px;
+  --br-28xl-3: 47.3px;
+}
