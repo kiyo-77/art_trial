@@ -1,5 +1,7 @@
 import "./Cover.css";
-
+const handleClick = () => {
+  window.location.href='https://itsmeprasanth.github.io/Login/index.html';
+};
 const Cover = () => {
   return (
     <div className="cover">
@@ -8,24 +10,27 @@ const Cover = () => {
           <h1 className="dream-artscapes">Dream Artscapes</h1>
           <div className="navbar">
             <nav className="home-parent">
-              <div className="home">HOME</div>
-              <div className="paintings">PAINTINGS</div>
-              <div className="printmaking">PRINTMAKING</div>
-              <div className="sculptures"> SCULPTURES</div>
-              <div className="contact">CONTACT</div>
+              <div className="active-menu"><a class="active" href="#">HOME</a></div>
+              <div className="menu"><a href="#">PAINTINGS</a></div>
+              <div className="menu"><a href="#">PRINTMAKING</a></div>
+              <div className="menu"><a href="#">SCULPTURES</a></div>
+              <div className="menu"><a href="#">CONTACT</a></div>
             </nav>
           </div>
-          <button className="button-2">
-            <div className="login">Login</div>
-          </button>
-          <button className="button-1">
-            <div className="login">Sign Up</div>
+          <button class="btn btn-2 hover-slide-up" onClick={handleClick}>
+    <span>Login</span>
+  </button>
+          
+          <button className="button1" onClick={handleClick}>
+            <div className="login">SIGN UP</div>
           </button>
           <img
             className="cecily-borwn-1-1-icon"
             alt=""
             src="/cecily-borwn-1-1@2x.png"
           />
+         
+          
         </div>
       </section>
       <section className="genre">

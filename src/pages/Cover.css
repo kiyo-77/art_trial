@@ -1,3 +1,77 @@
+:active, :hover, :focus {
+  outline: 0!important;
+  outline-offset: 0;
+}
+::before,
+::after {
+  position: absolute;
+  content: "";
+}
+
+.btn-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 10px auto 35px;
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  width: auto; height: auto;
+  background-color: transparent;
+  border: 1px solid rgba(162, 89, 255, 1) ;
+  font-family: var(--font-kodchasan);
+  font-size:23.47px;
+  cursor: pointer;
+  top: 31px;
+  left: 920px;
+  box-sizing: border-box;
+  width: 75px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 25px 15px;
+  min-width: 150px;
+}
+  .btn span {         
+    position: relative;
+    display: inline-block;
+    
+   
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    transition: 0.3s;
+  }
+
+
+  .btn-2::before {
+    background-color: rgba(162, 89, 255, 1);
+    transition: 0.3s ease-out;
+  }
+  .btn-2 span {
+    color: rgb(28, 31, 30);
+    
+    transition: 0.2s;
+  }  
+  .btn-2 span:hover {
+    color: rgb(255,255,255);
+    transition: 0.2s 0.1s;
+  }
+  
+  .btn.hover-slide-up::before {
+    bottom: 0; left: 0; right: 0; 
+    height: 0%; width: 100%;
+  }
+  .btn.hover-slide-up:hover::before {
+    height: 100%;
+  }
+
 .dream-artscapes {
   margin: 0;
   position: absolute;
@@ -13,42 +87,74 @@
   height: 125px;
   text-shadow: 0 2.2px 2.17px rgba(0, 0, 0, 0.25);
 }
-.home,
-.paintings {
+.menu
+{
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
-.home {
   width: 124px;
   height: 26px;
+  margin-left:70px;
+  margin-top:30px;
+  text-align: left;
 }
-.paintings {
-  width: 190px;
-}
-.printmaking {
-  justify-content: center;
-  width: 246px;
-  height: 47px;
-}
-.contact,
-.printmaking,
-.sculptures {
+
+.active-menu
+{
   position: relative;
   display: flex;
   align-items: center;
-  flex-shrink: 0;
-}
-.sculptures {
-  text-align: left;
-  width: 254px;
-}
-.contact {
   justify-content: center;
-  width: 144px;
-  height: 37px;
+  flex-shrink: 0;
+  width: 124px;
+  height: 26px;
+  margin-left:70px;
+  margin-top:30px;
+  text-align: left;
+  background-color:#d2564f;
+  color:white;
+  text-decoration: none;
+}
+nav.home-parent div.active-menu a
+{
+  text-decoration: none;
+  color:white;
+}
+
+
+nav.home-parent div.menu a
+{
+  text-decoration: none;
+  color:black;
+}
+nav.home-parent div.menu a::before{
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  transition: 0.5s transform ease;
+  transform: scale3d(0,1,1);
+  transform-origin: 0 50%;
+  text-decoration: none;
+}
+nav.home-parent div.menu a:hover::before{
+  transform: scale3d(1,1,1);
+  text-decoration: none;
+}
+
+nav.home-parent div.menu a::before{
+  background: #ff7262;
+  transform-origin: 100% 50%;
+  text-decoration: none;
+}
+nav.home-parent div.menu a:hover::before{
+  transform-origin: 0 50%;
+  text-decoration: none;
 }
 .home-parent,
 .navbar {
@@ -74,49 +180,51 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.login {
-  position: relative;
-  font-size: 23.47px;
-  font-family: var(--font-kodchasan);
-  color: var(--color-gray);
-  text-align: left;
-}
-.button-1,
-.button-2 {
+
+
+.button1 {
   cursor: pointer;
-  border: 1px solid #a259ff;
+  color:white ;
   padding: var(--padding-3xs);
-  background-color: transparent;
+  font-family: var(--font-kodchasan);
+  font-size:18px;
+  background-color: #ff7262;
   position: absolute;
   top: 31px;
-  left: 920px;
   box-sizing: border-box;
-  width: 75px;
   height: 48px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-.button-1 {
-  border: 1px solid #ff7262;
   left: 1110px;
   width: 130px;
+  font-size:23.47px;
+  
+  
 }
-.cecily-borwn-1-1-icon,
+
+
 .first-page {
   position: absolute;
   left: 0;
-  width: 1440px;
+  width: 1920px;
+  
 }
 .cecily-borwn-1-1-icon {
-  top: 250px;
+  top: 500px;
   height: 648px;
-  object-fit: cover;
+  width:1080px;
+ margin-left:180px;
+ margin-top:200px;
+ 
+ 
+  
 }
 .first-page {
   top: -31px;
   height: 898px;
+ 
 }
 .explore-a-palette,
 .explore-a-palette1,
@@ -127,7 +235,7 @@
 .first {
   top: 54px;
   left: 0;
-  width: 1440px;
+  width: 1920px;
   height: 867px;
   text-align: left;
   font-size: var(--font-size-36xl);
@@ -346,7 +454,7 @@
   top: 961px;
   left: 0;
   background-color: #2c2d26;
-  width: 1440px;
+  width: 1920px;
   height: 1024px;
   overflow: hidden;
   text-align: left;
@@ -405,7 +513,7 @@
   top: 2025px;
   left: 0;
   background-color: var(--color-linen-100);
-  width: 1440px;
+  width: 1920px;
   height: 1024px;
   overflow: hidden;
   text-align: left;
@@ -582,7 +690,7 @@
   top: 3092px;
   left: 0;
   background-color: #a54c48;
-  width: 1440px;
+  width: 1920px;
   height: 1024px;
   overflow: hidden;
   text-align: left;
