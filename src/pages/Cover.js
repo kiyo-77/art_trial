@@ -1,29 +1,24 @@
 import "./Cover.css";
-const handleClick = () => {
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import Login from './Login';
+/*const handleClick = () => {
   window.location.href='https://itsmeprasanth.github.io/Login/index.html';
-};
+
+};*/
+
+import Header from "./Header";
 const Cover = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    
+    navigate('/login');
+  };
   return (
-    <div className="cover">
+<div className="cover">
       <section className="first">
         <div className="first-page">
-          <h1 className="dream-artscapes">Dream Artscapes</h1>
-          <div className="navbar">
-            <nav className="home-parent">
-              <div className="active-menu"><a class="active" href="#">HOME</a></div>
-              <div className="menu"><a href="#">PAINTINGS</a></div>
-              <div className="menu"><a href="#">PRINTMAKING</a></div>
-              <div className="menu"><a href="#">SCULPTURES</a></div>
-              <div className="menu"><a href="#">CONTACT</a></div>
-            </nav>
-          </div>
-          <button class="btn btn-2 hover-slide-up" onClick={handleClick}>
-    <span>Login</span>
-  </button>
-          
-          <button className="button1" onClick={handleClick}>
-            <div className="login">SIGN UP</div>
-          </button>
+       <Header />
           <img
             className="cecily-borwn-1-1-icon"
             alt=""
@@ -138,6 +133,7 @@ const Cover = () => {
           <h2 className="kara-walker">Kara Walker</h2>
         </div>
       </section>
+     
     </div>
   );
 };

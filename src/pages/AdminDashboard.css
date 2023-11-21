@@ -1,0 +1,21 @@
+.counter-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .counter-box {
+    text-align: center;
+  }
+  
+  .counter {
+    font-size: 3em;
+    font-weight: bold;
+    color: #3498db; /* Change color as desired */
+  }
+  
+  .counter-label {
+    font-size: 1.5em;
+    color: #2c3e50; /* Change color as desired */
+  }
+  

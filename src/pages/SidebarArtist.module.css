@@ -1,0 +1,53 @@
+/* SidebarArtist.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+html,body{
+  height: 100%;
+  margin: 0;
+}
+  .menu {
+    padding: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .menuItem {
+    margin-bottom: 10px;
+  }
+  
+  .subMenu {
+    background-color: #3e3e3e; /* Set your desired background color for submenu */
+    padding-left: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .fixed-sidebar{
+    width:100%;
+  }
+
+  .menu{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:40px;
+    font-weight:bold;
+  }
+
+  span
+  {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:30px;
+    font-weight:bold;
+  }
+
+  li
+  {
+    padding-top:50px;
+  }
+
+  
+
+.side{
+  
+  
+  background: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+}
+

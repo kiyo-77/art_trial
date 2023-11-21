@@ -1,0 +1,24 @@
+.admin-container {
+    display: flex;
+  }
+  
+  .admin-offers {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .offer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .offer-item {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: calc(25% - 20px); /* Adjust the width based on the number of offers in a row */
+    /* The above calculation accounts for margin */
+  }
+  

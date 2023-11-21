@@ -1,0 +1,29 @@
+/* ArtistList.css */
+.artist-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+  .artist-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .artist-name {
+    font-weight: bold;
+    font-size: 30px;
+
+  }
+  
+  .artist-email {
+    font-size: 20px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
