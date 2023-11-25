@@ -1,6 +1,6 @@
 import "./Cover.css";
 import {Routes, Route, useNavigate} from 'react-router-dom';
-import Login from './Login';
+
 /*const handleClick = () => {
   window.location.href='https://itsmeprasanth.github.io/Login/index.html';
 
@@ -10,19 +10,16 @@ import Header from "./Header";
 const Cover = () => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    
-    navigate('/login');
-  };
+ 
   return (
 <div className="cover">
       <section className="first">
         <div className="first-page">
        <Header />
           <img
-            className="cecily-borwn-1-1-icon"
+            className="first-img"
             alt=""
-            src="/cecily-borwn-1-1@2x.png"
+            src="/home1.avif"
           />
          
           
@@ -50,53 +47,52 @@ const Cover = () => {
           and concepts to provoke thought and emotion.
         </div>
         <div className="rectangle-group">
-          <img className="frame-inner" alt="" src="/rectangle-3@2x.png" />
+          <img className="frame-inner" alt="" src="/genre2.jpg" />
           <div className="frame-div" />
         </div>
         <div className="step-into-a">
-          Step into a world of precision and detail with our realism and
-          impressionism collections. These works of art capture the essence of
-          reality in a way that feels almost tangible. Let the exquisite
-          brushstrokes and impeccable attention to detail transport you to
-          different times and places.
+          Mixed media art, a fusion of diverse materials, transcends conventional boundaries, weaving a narrative
+           that is both tactile and visually captivating. Blending paint, collage, and found objects craft an intricate compositions
+            that invite viewers to explore the nuanced layers of their 
+            creative expression. 
         </div>
-        <b className="realism-and-impressionism">Realism and Impressionism</b>
+        <b className="realism-and-impressionism">Mixed Media</b>
         <div className="houses-of-parliament-container">
           <span className="tracey-emin-txt-container">
-            <p className="the-sun-and">Houses of Parliament</p>
-            <p className="the-sun-and">-Claude Monet</p>
+            <p className="the-sun-and">Saraswati</p>
+            <p className="the-sun-and">-G Subramanian</p>
           </span>
         </div>
         <div className="watchdog-ii-nam-june-paik-wrapper">
           <div className="watchdog-ii-nam-container">
             <span className="tracey-emin-txt-container">
-              <p className="the-sun-and">Watchdog II</p>
-              <p className="the-sun-and">-Nam June Paik</p>
+              <p className="the-sun-and">Horizon</p>
+              <p className="the-sun-and">-Jordan Hayes</p>
             </span>
           </div>
         </div>
         <div className="our-gallery-isnt">
-          Our gallery isn't limited to two-dimensional art. Explore the world of
-          three-dimensional art with our sculpture and installation collection.
-          These captivating pieces provide a tactile experience, inviting you to
-          interact with art in a whole new way.
+        At Dream Artscapes, we believe in the transformative nature of digital art and its ability
+         to redefine the boundaries of artistic expression. Join us on a journey where pixels become a 
+         canvas for boundless creativity, and where the digital medium becomes a playground for the 
+         extraordinary. 
         </div>
         <div className="genre-item" />
-        <b className="scupltures">Scupltures</b>
-        <img className="genre-inner" alt="" src="/rectangle-2@2x.png" />
+        <b className="scupltures">Digital Art</b>
+        <img className="genre-inner" alt="" src="/genre3.jpg" />
         <div className="ellipse-div" />
       </section>
       <section className="about-us">
-        <img className="about-us-child" alt="" src="/group-6.svg" />
-        <img className="about-us-item" alt="" src="/rectangle-4@2x.png" />
+       
+        <img className="about-us-item" alt="" src="/aboutus1.jpg" />
         <div className="at-gallery-name-container">
           <span className="tracey-emin-txt-container">
             <p className="the-sun-and">
               At Dream Artscapes, we're dedicated to connecting artists with a
-              global audience. Our mission is to celebrate diverse art forms,
+              global audience. &nbsp; &nbsp; Our mission is to celebrate diverse art forms,
               provide exposure to talented creators, and foster an inclusive
-              artistic community. Explore a rich collection of art that spans
-              various genres, styles, and perspectives. Join us on a journey of
+              artistic community. Explore a rich collection of art that spans &emsp;&emsp;
+              various genres, styles,and perspectives.Join us on a journey of
               creativity and inspiration.
             </p>
             <p className="blank-line">&nbsp;</p>

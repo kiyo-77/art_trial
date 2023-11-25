@@ -1,4 +1,4 @@
-/* ArtistList.css */
+
 .artist-list {
     display: flex;
     flex-wrap: wrap;
@@ -7,9 +7,10 @@
   }
   
   .artist-box {
-    border: 1px solid #ddd;
+    border: 1px solid black;
     padding: 15px;
     margin-bottom: 20px;
+    background-color: white;
     
   }
   
@@ -27,3 +28,12 @@
     margin-top: 10px;
   }
   
+  .delete-artist
+  {
+    background-color: #a685bc !important;
+  font-size:15px !important;
+  width:30% !important;
+  color:white !important;
+  font-weight:bold !important;
+  margin-left:200px !important;
+  }

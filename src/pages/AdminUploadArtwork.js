@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import SidebarAdmin from "./SidebarAdmin";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import "./AdminUploadedImages.css";
 function AdminUploadArtwork() {
   const [img, setImg] = useState(null);
   const [genre, setGenre] = useState('');
@@ -114,11 +114,11 @@ function AdminUploadArtwork() {
                 {imgUrl.map((dataVal, index) => (
                   <div key={index} className="image-box m-2 ">
                     <img src={dataVal.url} alt={`Uploaded ${index}`} className="img-upload"/>
-                    <p className="font-weight-bold fs-1 mb-2 ml-6 fw-bold">{dataVal.metadata.customMetadata && dataVal.metadata.customMetadata.workName}</p>
-                    <p className="ms-5 fs-4 fw-bold mb-3">By {dataVal.metadata.customMetadata && dataVal.metadata.customMetadata.username}</p>
-                    <p className="fst-italic fs-4 mb-3 ml-4" >{dataVal.metadata.customMetadata && dataVal.metadata.customMetadata.genre}</p>
-                    <p className="fs-3 ml-4 fw-bold">Rs.{dataVal.metadata.customMetadata && dataVal.metadata.customMetadata.price}</p>
-                    <button onClick={() => handleAddToArtworks(dataVal.url, dataVal.metadata)}>Add to Artworks</button>
+                    <p className="font-weight-bold fs-3 mb-2 ml-6 fw-bold">{dataVal.metadata.customMetadata && dataVal.metadata.customMetadata.workName}</p>
+                    <p className="ms-5 fs-5 fw-bold mb-3">By {dataVal.metadata.customMetadata && dataVal.metadata.customMetadata.username}</p>
+                    <p className="fst-italic fs-5 mb-3 ml-4" >{dataVal.metadata.customMetadata && dataVal.metadata.customMetadata.genre}</p>
+                    <p className="fs-5 ml-4 fw-bold">Rs.{dataVal.metadata.customMetadata && dataVal.metadata.customMetadata.price}</p>
+                    <button onClick={() => handleAddToArtworks(dataVal.url, dataVal.metadata)} className="add-artwork">Add to Artworks</button>
                   </div>
                 ))}
               </div>

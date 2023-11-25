@@ -7,7 +7,7 @@ import {
   doc,
 } from "firebase/firestore";
 import SidebarAdmin from "./SidebarAdmin";
-import "./ArtistList.css"; // Create a CSS file for your styles
+import "./ArtistList.css"; 
 
 function ArtistList() {
   const [artists, setArtists] = useState([]);
@@ -79,13 +79,14 @@ function ArtistList() {
           <SidebarAdmin />
         </div>
         <div className="col-md-8 col-lg-9 col-xl-10 mt-5">
-          <div className="row artist-list">
+          <h1>Artists</h1>
+          <div className="mt-5 row artist-list">
             {artists.map((artist, index) => (
               <div key={index} className="col-md-4 mb-4">
                 <div className="artist-box">
                   <p className="artist-name">{artist.username}</p>
                   <p className="artist-email">{artist.emailid}</p>
-                  <button onClick={() => deleteArtist(artist)}>Delete</button>
+                  <button onClick={() => deleteArtist(artist)} className="delete-artist">Delete</button>
                 </div>
               </div>
             ))}

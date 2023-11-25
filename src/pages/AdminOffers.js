@@ -44,28 +44,29 @@ function AdminOffers() {
               <h1 className="mt-2">Offers</h1>
             </div>
             <div className="col-md-12">
-              {offers.map((offer) => (
-                <div key={offer.id} className="col-md-4 mb-4 ms-5">
-                  <div className="card">
-                    <div className="card-body">
-                      <h5 className="card-title">Artwork ID: {offer.artworkId}</h5>
-                      <p className="card-text">Artist: {offer.artist}</p>
-                      <p className="card-text">User Email: {offer.userEmail}</p>
-                      <p className="card-text">Questions: {offer.questions}</p>
-                      <div className="d-flex justify-content-between mt-3">
-                        <button
-                          type="button"
-                          className="delete"
-                          onClick={() => handleDelete(offer.id)}
-                        >
-                          Delete
-                        </button>
-                      
+              <div className="row">
+                {offers.map((offer) => (
+                  <div key={offer.id} className="col-md-4 mb-4 ms-2">
+                    <div className="card">
+                      <div className="card-body">
+                        <h5 className="card-title fs-3">Artwork Name: {offer.artworkId}</h5>
+                        <p className="card-text fs-5">By {offer.artist}</p>
+                        <p className="card-text">User Email: {offer.userEmail}</p>
+                        <p className="card-text fs-5">Offer: {offer.questions}</p>
+                        <div className="d-flex justify-content-between mt-3">
+                          <button
+                            type="button"
+                            className="delete"
+                            onClick={() => handleDelete(offer.id)}
+                          >
+                            Delete
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -75,3 +76,4 @@ function AdminOffers() {
 }
 
 export default AdminOffers;
+

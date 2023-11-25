@@ -1,0 +1,29 @@
+
+.form-contact
+{
+  
+    width:400px;
+    margin-top:-50px;
+    margin-left:60px;
+    padding:20px;
+    height:45%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+.submit-button
+{
+    background-color: blueviolet;
+    width:100px;
+    margin:10px;
+}
+
+.h2-contact
+{
+    margin-left:-50px;
+}
+
+.contact-headline
+{
+    font-family: 'Abril Fatface', serif;
+}

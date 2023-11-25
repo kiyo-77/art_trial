@@ -21,6 +21,8 @@ import AdminUploadArtwork from './pages/AdminUploadArtwork';
 import Register from './pages/Register';
 import OfferPage from "./pages/OfferPage";
 import ArtistOffersPage from './pages/ArtistOffersPage';
+import Artist2Visitor from './pages/Artist2Visitor';
+import ContactUs from './pages/ContactUs';
 function App() {
  
   return (
@@ -43,9 +45,12 @@ function App() {
       <Route path="/admin-uploaded-artworks" element={<AdminDisplayArtwork />} />
       <Route path="/admin-submitted-artworks" element={<AdminUploadArtwork />} />
       <Route path="/register-page" element={<Register />} />
-      <Route path="/offer" element={<OfferPage />} />
+      <Route path="/offers/:workName" element={<OfferPage />} />
       <Route path="/artist-offers" element={<ArtistOffersPage />} />
-      <Route path="/artist/:artistName" element={<Artists_Visitor />} />
+      <Route path="/artist/:artistName" element={<Artist2Visitor />} />
+      <Route path="/artist-visitor" element={<Artists_Visitor />} />
+      <Route path="/contact-visitor" element={<ContactUs />} />
+
       </Routes>
     
        </div>

@@ -17,17 +17,18 @@ const Header = () => {
         navigate('/register-page');
       };
   return (
+    <body>
     <div>
-    <h1 className="dream-artscapes">Dream Artscapes</h1>
+    <h1 className="dream-artscapes ms-5">Dream Artscapes</h1>
    
-          <div className="navbar">
+          <div className="navbar ms-5">
             
             <nav className="home-parent">
-              <div className="active-menu"><Link to="/">HOME</Link></div>
-              <div className="menu"><Link to="/artworks-visitor">PAINTINGS</Link></div>
-              <div className="menu"><Link to="/artists-visitor">PRINTMAKING</Link></div>
-              <div className="menu"><Link to="#">SCULPTURES</Link></div>
-              <div className="menu"><Link to="#">CONTACT</Link></div>
+              <div className="menu"><Link to="/">HOME</Link></div>
+              <div className="menu"><Link to="/artworks-visitor">ARTWORKS</Link></div>
+              <div className="menu"><Link to="/artists-visitor">ARTISTS</Link></div>
+             
+              <div className="menu"><Link to="/contact-visitor">CONTACT</Link></div>
             </nav>
          
         
@@ -39,7 +40,7 @@ const Header = () => {
             <div className="login">SIGN UP</div>
           </button>
   </div>
-
+  </body>
        
   );
 };

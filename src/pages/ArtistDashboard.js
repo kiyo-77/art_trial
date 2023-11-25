@@ -4,7 +4,7 @@ import { db, imageDb } from '../firebase/config';
 import { ref, listAll, getMetadata } from 'firebase/storage';
 import { auth } from '../firebase/config';
 import SidebarArtist from './SidebarArtist';
-
+import "./AdminDashboard.css";
 const ArtistDashboard = () => {
   const [numArtworks, setNumArtworks] = useState(0);
   const [numOffers, setNumOffers] = useState(0);
@@ -37,7 +37,7 @@ const ArtistDashboard = () => {
         await fetchUsername(userId);
     
         if (!user) {
-          // User not logged in, handle accordingly
+         
           return;
         }
     
@@ -65,7 +65,7 @@ const ArtistDashboard = () => {
       try {
         const user = auth.currentUser;
         if (!user) {
-          // User not logged in, handle accordingly
+          
           return;
         }
 
@@ -87,18 +87,20 @@ const ArtistDashboard = () => {
 
     fetchArtworks();
     fetchOffers();
-  }, [artistUsername]); // Ensure that the dependency array is closed properly
+  }, [artistUsername]); 
 
   return (
     <div>
       <SidebarArtist />
 
       <div className="counter-container">
-        <div className="counter-box">
+        <div className="counter-box a-ar-count">
+        <i className="material-icons icon">image</i>
           <span className="counter">{numArtworks}</span>
           <p className="counter-label">Artworks Uploaded</p>
         </div>
-        <div className="counter-box">
+        <div className="counter-box a-of-count">
+        <i className="material-icons icon">local_offer</i>
           <span className="counter">{numOffers}</span>
           <p className="counter-label">Offers Received</p>
         </div>

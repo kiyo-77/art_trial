@@ -1,0 +1,333 @@
+.artist-list-content
+{
+    margin-top:200px;
+    margin-left:200px;
+}
+
+ul
+{
+    list-style-type:none;
+    margin-top:80px;
+    
+}
+
+li
+{
+    display:inline-block;
+    margin-left:-50px;
+   
+}
+
+
+
+.artist-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .artist-item {
+   
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  .artist-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .artist-info {
+    position: relative;
+  }
+  
+  .artist-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .artist-work {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+  }
+  
+  .artist-works
+  {
+    margin-top:150px;
+  }
+
+
+  
+
+.artist-works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  
+  .work-box {
+    width: calc(33.33% - 10px); 
+    margin-bottom: 20px;
+  }
+  
+  .work-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .work-metadata {
+    margin-top: 10px;
+  }
+  
+
+  .works-artist{
+    margin-top:30px;
+    margin-left:50px;
+    font-family: 'Abril Fatface', serif;
+    font-size:40px;
+    margin-right:500px;
+    margin-bottom:40px;
+  }
+
+  
+
+.artist-works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  
+  .work-box {
+    width: calc(33.33% - 10px); 
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding:10px;
+  }
+  
+  .work-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .work-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border:2px solid black;
+    padding:5px;
+  }
+  
+  .work-metadata {
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+  }
+  
+
+  .a-vis-hl
+  {
+    
+    font-family: 'Abril Fatface', serif;
+    
+    margin-left:250px;
+    font-size:40px;
+
+  }
+
+  .categoryWrapper{
+    height: 230px;
+    width: 310px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border:2px solid black;
+    margin-right:70px;
+   
+  }
+  
+  .categoryWrapper:after{
+    position: absolute;
+    top:0;
+    left: 0;
+    right:0;
+    bottom: 0;
+  
+  background: #7F00FF; 
+  background: -moz-linear-gradient(-135deg, #7F00FF 0%, #95909b 99%); 
+  background: -webkit-linear-gradient(-135deg, #7F00FF 0%,#95909b 99%); 
+  background: linear-gradient(135deg, #7F00FF 0%,#95909b 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7F00FF', endColorstr='#95909b',GradientType=1 ); 
+    content: '';
+    opacity: 0;
+      -webkit-transition: opacity 0.9s ease 0s; 
+  }
+  
+  .categoryWrapper:hover:after{
+    opacity: 0.4;
+  }
+  
+  .categoryWrapper h1{
+    color:white;
+    font-size: 50px;
+    letter-spacing: 2px;
+    -webkit-transition: all 0.15s ease 0s; 
+    position: relative;
+    z-index: 10;
+  }
+  
+  .categoryWrapper:hover h1{
+    transform: translateY(-10px);
+  }
+  
+  .categoryWrapper button{
+    position: absolute;
+    transform: translatey(60px);
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    color:white;
+    width: 250px;
+    height:50px;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    z-index: 10;
+  }
+  
+  .categoryWrapper button span{
+    display: block;
+    position: relative;
+    line-height: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .categoryWrapper button > span:after{
+    content:'';
+    position: absolute;
+    top:0;
+    left: 50%;
+    width: 20px;
+    height: 0;
+    
+    border: 1px solid white;
+    border-left: none;
+    border-bottom: none;
+    
+        transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+  }
+  
+  .categoryWrapper:hover button > span:after{
+    width: calc(50% - 1px);
+    height: calc(100% - 2px);
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+  }
+  
+  .categoryWrapper button > span:before{
+    content:'';
+    position: absolute;
+    top:0;
+    right: 50%;
+    width: 20px;
+    height: 0;
+    
+    border: 1px solid white;
+    border-right: none;
+    border-bottom: none;
+    
+        transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+  }
+  
+  .categoryWrapper:hover button > span:before{
+    width: calc(50% - 1px);
+    height: calc(100% - 2px);
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+  }
+  
+  .categoryWrapper button > span > span:before{
+    content:'';
+    position: absolute;
+    bottom:0;
+    right: 0%;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    
+  }
+  
+  .categoryWrapper:hover button > span > span:before{
+    opacity: 1;
+    border-bottom: 1px solid white;
+    width: calc(50%);
+    height: 1px;
+    transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+  }
+  
+  .categoryWrapper button > span > span:after{
+    content:'';
+    position: absolute;
+    bottom:0;
+    left: 0%;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    
+  }
+  
+  .categoryWrapper:hover button > span > span:after{
+    opacity: 1;
+    border-bottom: 1px solid white;
+    width: calc(50%);
+    height: 1px;
+    transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+  }
+  
+  .categoryWrapper button > span > span > span{
+    transition: color 0.15s ease-out 0.3s;
+    color: transparent;
+  }
+  
+  .categoryWrapper:hover button > span > span > span{
+    color:white;
+  }
+  
+  .categoryWrapper button > span > span > span:after{
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    color:#1f2e4d;
+    content: attr(data-attr-span);
+    width: 0%;
+    height: 100%;
+    background:white;
+    white-space: nowrap;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    transition: width 0.2s;
+  }
+  
+  .categoryWrapper button:hover > span > span > span:after{
+    width: 100%;
+  }

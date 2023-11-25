@@ -11,6 +11,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
   }
   
   .offer-item {
@@ -18,7 +19,18 @@
     border: 1px solid #ddd;
     padding: 10px;
     margin: 10px;
-    width: calc(25% - 20px); /* Adjust the width based on the number of offers in a row */
-    /* The above calculation accounts for margin */
+    
   }
-  
+  .card
+  {
+    border: 2px solid #FFB396;
+    padding:15px;
+
+  }
+  .card-body
+  {
+    background-color: rgba(240, 228, 228, 0.366);
+    box-shadow: inset;
+    
+  }
+ 

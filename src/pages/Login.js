@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { auth, db } from '../firebase/config';
 import { useNavigate } from 'react-router-dom';
-
+import "./login.css";
 const Login = () => {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
@@ -40,23 +40,32 @@ const GotoRegisterpage=()=>{
   };
 
   return (
-    <div>
+    
+<div class="body-container">
+ 
+     <div class = "wrapper">
       <h3>Login</h3>
+      <div class = "input-box">
       <input
         placeholder="Email..."
         onChange={(event) => {
           setLoginEmail(event.target.value);
         }}
       />
+      </div>
+      <div class = "input-box">
       <input
         placeholder="Password..."
+        type="password"
         onChange={(event) => {
           setLoginPassword(event.target.value);
         }}
-      />
-      <button onClick={login}>Login</button>
-      <button onClick={GotoRegisterpage}>Register</button>
+      /></div>
+      <button onClick={login} class='btn'>Login</button>
+      <button onClick={GotoRegisterpage} class='btn'>Register</button>
     </div>
+    </div>
+  
   );
 };
 

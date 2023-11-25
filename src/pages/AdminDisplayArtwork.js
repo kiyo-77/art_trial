@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { imageDb } from '../firebase/config';
 import { ref, listAll, getDownloadURL, getMetadata, updateMetadata } from "firebase/storage";
-import './artwork.css'; // Import the new CSS file
+import './artwork.css'; 
 import SidebarAdmin from "./SidebarAdmin";
 
 function AdminDisplayArtwork() {
@@ -91,11 +91,11 @@ function AdminDisplayArtwork() {
             <div className="col-md-12">
               <div className="image-container d-flex flex-wrap">
             {artworks.map((artwork, index) => (
-              <div key={index} className="image-display-box m-2 col-md-4">
+              <div key={index} className="image-box m-2 col-md-4">
                 <img src={artwork.url} alt={`Artwork ${index}`} className="img-display" />
-                <p className="font-weight-bold fs-1 mb-2 ml-6 fw-bold">{artwork.metadata.customMetadata.workName || "untitled"}</p>
-                <p className="ms-5 fs-4 fw-bold mb-3">By {artwork.metadata.customMetadata.username || "unknown"}</p>
-                <p className="fst-italic fs-4 mb-3 ml-4">{modifiedArtwork === artwork ? (
+                <p className="font-weight-bold fs-3 mb-4 ml-6 fw-bold">{artwork.metadata.customMetadata.workName || "untitled"}</p>
+                <p className="ms-5 fs-5 fw-bold mb-3">By {artwork.metadata.customMetadata.username || "unknown"}</p>
+                <p className="fst-italic fs-5 mb-3 ml-4" >{modifiedArtwork === artwork ? (
                   <input
                     type="text"
                     value={newGenre}
@@ -105,7 +105,7 @@ function AdminDisplayArtwork() {
                 ) : (
                   artwork.metadata && artwork.metadata.customMetadata.genre
                 )}</p>
-                <p className="fs-3 ml-4 fw-bold">Rs.{modifiedArtwork === artwork ? (
+                <p className="fs-5 ml-4 fw-bold">Rs.{modifiedArtwork === artwork ? (
                   <input
                     type="text"
                     value={newPrice}

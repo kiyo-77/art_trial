@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { collection, addDoc } from 'firebase/firestore';
 import { auth, db } from '../firebase/config';
 import { useNavigate } from 'react-router-dom';
-
+import "./login.css";
 const Register = () => {
   const [registerEmail, setRegisterEmail] = useState('');
   const [registerPassword, setRegisterPassword] = useState('');
@@ -13,7 +13,7 @@ const Register = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
 
-      // After successful registration, set the user's role in Firestore
+     
       await setUserRoleInFirestore(userCredential.user.uid);
 
       console.log('User registered');
@@ -34,28 +34,36 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <h3>Register User</h3>
+    <div class="body-container">
+    <div class="wrapper">
+      <h3>Sign Up</h3>
+      <div class = "input-box">
       <input
         placeholder="Email..."
+        type="email"
         onChange={(event) => {
           setRegisterEmail(event.target.value);
         }}
-      />
+      /></div>
+      <div class = "input-box">
       <input
         placeholder="Username..."
         onChange={(event) => {
           setRegisterUsername(event.target.value);
         }}
-      />
+      /></div>
+      <div class = "input-box">
       <input
         placeholder="Password..."
+        type="password"
         onChange={(event) => {
           setRegisterPassword(event.target.value);
         }}
-      />
-      <button onClick={register}>Create User</button>
+      /></div>
+      <button onClick={register} class="btn">Register</button>
     </div>
+     </div>
+
   );
 };
 

@@ -50,17 +50,17 @@ function ArtistProfile() {
       const q = query(usersCollection, where('userId', '==', userId));
       const querySnapshot = await getDocs(q);
 
-      // Assuming there's only one document with the given userId
+      
       if (!querySnapshot.empty) {
         const userDocRef = querySnapshot.docs[0].ref;
 
-        // Update the document
+        
         await updateDoc(userDocRef, {
           emailid: userDetails.emailid,
           username: userDetails.username,
         });
 
-        // Display success toast
+       
         toast.success('Profile updated successfully!', {
           position: toast.POSITION.TOP_RIGHT,
         });
@@ -88,17 +88,18 @@ function ArtistProfile() {
         <SidebarArtist />
       </div>
      
-      <div className="col-md-5 mt-5 mx-5 md-5">
+      <div className="col-md-5 mt-5 md-5">
         <ToastContainer />
         <h1 className="mb-4 ">Profile</h1>
-        <form>
+        <hr />
+        <form className='form-profile'>
           <div className="mb-5 p-3 mt-5 ">
-            <label htmlFor="emailid" className="form-label fs-3 fw-bold">
+            <label htmlFor="emailid" className="form-label fs-5 fw-bold">
               Email address
             </label>
             <input
               type="email"
-              className="form-control fs-3"
+              className="form-control fs-5"
               id="emailid"
               name="emailid"
               value={userDetails.emailid}
@@ -107,12 +108,12 @@ function ArtistProfile() {
             />
           </div>
           <div className="mb-5 p-3 mt-4">
-            <label htmlFor="username" className="form-label fs-3 fw-bold">
+            <label htmlFor="username" className="form-label fs-5 fw-bold">
               Username
             </label>
             <input
               type="text"
-              className="form-control fs-3"
+              className="form-control fs-5"
               id="username"
               name="username"
               value={userDetails.username}

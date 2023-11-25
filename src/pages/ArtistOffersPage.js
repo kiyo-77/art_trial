@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { auth, db } from '../firebase/config';
 import { getDocs, collection, query, where } from 'firebase/firestore';
 import SidebarArtist from './SidebarArtist'; 
+import "./AdminOffers.css";
 
 function ArtistOffersPage() {
   const [artistOffers, setArtistOffers] = useState([]);
@@ -13,7 +14,6 @@ function ArtistOffersPage() {
         const user = auth.currentUser;
 
         if (user) {
-          // If a user is logged in, fetch their data
           const usersRef = collection(db, 'users');
           const q = query(usersRef, where('userId', '==', user.uid));
           const userSnapshot = await getDocs(q);
@@ -26,12 +26,10 @@ function ArtistOffersPage() {
           const userData = userSnapshot.docs[0].data();
           setArtistUsername(userData.username);
 
-          // Fetch offers where artist equals the user's username
           const offersRef = collection(db, 'offers');
           const offersQuery = query(offersRef, where('artist', '==', userData.username));
           const offersSnapshot = await getDocs(offersQuery);
 
-          // Extract offer data
           const offersData = offersSnapshot.docs.map((doc) => ({
             id: doc.id,
             ...doc.data(),
@@ -57,14 +55,18 @@ function ArtistOffersPage() {
         </div>
 
         <div className="col-md-8 col-lg-9 col-xl-10 mt-5">
-          <h1>Artist Offers</h1>
-          <div className="offers-container">
+          <h1>Offers</h1>
+          <hr />
+          <div className="row row-cols-1 row-cols-md-3 g-4 ">
             {artistOffers.map((offer) => (
-              <div key={offer.id} className="offer-box">
-                <p>Artwork ID: {offer.artworkId}</p>
-                <p>User Email: {offer.userEmail}</p>
-                <p>Questions: {offer.questions}</p>
-                {/* Add other details you want to display */}
+              <div key={offer.id} className="col mb-4 mt-5">
+                <div className="card h-100">
+                  <div className="card-body">
+                    <h5 className="card-title">Artwork Name: {offer.artworkId}</h5>
+                    <p className="card-text">User Email: {offer.userEmail}</p>
+                    <p className="card-text">Offer: {offer.questions}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
